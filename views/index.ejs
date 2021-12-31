@@ -1,0 +1,96 @@
+<div class="card mb-3">
+  <img src="/images/own.jpeg" class="card-img-top" alt=>
+  <div class="card-body">
+    <h1 class="card-title">Create Your Daily Workout</h1>
+    <p class="card-text">
+      This is a wider card with supporting text below as a natural lead-in to
+      additional content. This content is a little bit longer.
+    </p>
+    <p class="card-text">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p>
+    <div style="text-align: center; margin: 5%">
+      <a
+        style="width: 100px; height: 55px"
+        href="/befit/create/new"
+        class="btn btn-outline-info"
+        ><img style="width: 35px" src="/images/plus.png"
+      /></a>
+    </div>
+  </div>
+</div>
+<% workouts.forEach((workout,id) => { %>
+<div class="card text-center">
+  <h5 class="card-header" style="text-decoration: none; color: black"><%= workout.day %> (<%= workout.date %>)
+  </h5>
+  <% let newWorkout = workout.workout%> 
+  <% for(let i=0; i < newWorkout.length; i++) { %> 
+  <% if(newWorkout[i] !== '') { %>
+  <div class="card-body">
+    <button
+      type="button"
+      class="btn btn-info"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+    >
+      <%= newWorkout[i] %>
+    </button>
+    <% }} %>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Focus : <%= workout.focus %>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <% let newFit = workout.set%> <% for(let i=0; i < newFit.length; i++)
+          { %>
+          <div class="modal-body">
+            <h5><%= workout.workout[i]%></h5>
+            <p><%= workout.set[i]%> sets</p>
+            <p><%= workout.rep[i]%> reps</p>
+            <p>weight: <%= workout.weight[i]%> lbs</p>
+            <% } %>
+            <h4>NOTE: <%= workout.note %></h4>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">
+              <a
+                href="/befit/create/<%= workout.id %>/edit"
+                style="text-decoration: none; color: white"
+                >EDIT</a>
+            </button>
+            <form
+              action="/befit/create/<%= workout.id %>?_method=DELETE"
+              method="POST"
+            >
+              <input
+                type="submit"
+                class="btn btn-info"
+                style="text-decoration: none; color: black"
+                value="COMPLETE"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% }) %>

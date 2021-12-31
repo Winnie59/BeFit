@@ -1,0 +1,43 @@
+<div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Focus : <%= workout.focus %> </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5><%= workout.workout %> </h5>
+            <p><%= workout.set %> sets</p>
+            <p><%= workout.rep %> reps</p>
+            <p>weight: <%= workout.weight %> lbs </p>
+            <p>note: <%= workout.note %> </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"><a href="/befit/<%= workout.id %>/edit" style="text-decoration: none; color: white;">EDIT</a></button> 
+          <form action="/befit/<%= workout.id %>?_method=DELETE" method="POST">
+          <input type="submit"class="btn btn-info" style="text-decoration: none; color: black;" value="COMPLETE">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

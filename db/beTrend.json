@@ -1,0 +1,38 @@
+[
+    {
+        "name": "BE READY",
+        "title": "Preworkout Powder : Blue Frost",
+        "img": "/images/beTrendImg/beReady.jpeg",
+        "description": "BE Ready is the ultimate Pre workout experience. With only the highest grade of components available BE Ready speeds down its own lane. I’ve created this pre workout to be a staple in the process of Becoming Ready, regardless of what you’re getting ready for. BE Ready’s high-end elements are equipped to improve lean muscle mass, body composition, increase energy, boost your mood and to keep you focused during workouts. Distinct dosages are vital to me, each part of this product was mathematically calculated to create optimal results only. Stay ready with BE Ready.",
+        "price": 39.99,
+        "qty": 20
+    },{
+        "name": "BE BURN",
+        "title": "Stim Free Fat Loss Enhancer : Watermelon",
+        "img": "/images/beTrendImg/beBurn.jpeg",
+        "description": "Be a 24/7 BURNING MACHINE... Be BURN is more than a Fat Loss Support Product; it's a catalyst to your new mindset. Now you have the freedom to enhance your fat-burning progress on your own time. No more timing your workouts around when you can or can not take a pre-workout or a high-stim fat burner. If your busy schedule only allows you to workout at 11 PM, then Be Burn has your back.  Be Burn's arsenal of ingredients will give you the mental focus to stay on task through those long cardio sessions. While at the same time aiding in suppressing your late-night cravings and mobilizing your stored fat. Once the daily fight is won, the feeling of becoming more can't be matched. BE Burn.",
+        "price": 44.99,
+        "qty": 15
+    },{
+        "name": "BE LEAN",
+        "title": "Fat Loss Enhancer Powder : Cherry Cola",
+        "img": "/images/beTrendImg/beLean.webp",
+        "description": "BE Lean is the solution to your unwanted body fat problems. Storing extra body fat is not only dangerous to your health but it effects your frame of mind. Confront your body fat with BE Lean and have confidence knowing you are equipped with an elite arsenal of ingredients. I wanted to drop a bomb on the war of fat loss. With an improved metabolism, 24-hour fat oxidation, zero water retention and an increased thermal environment fat won’t stand a chance. Once the daily fight is won, the feeling of becoming leaner can’t be matched. BE Lean.",
+        "price": 44.99,
+        "qty": 12
+    },{
+        "name": "BE CLEAN",
+        "title": "Hair, Skin, Nail & Probiotic",
+        "img": "/images/beTrendImg/beClean.jpeg",
+        "description": "BE Clean is the exclusive appearance enhancer. I wanted to formulate a product for both men and women to improve their overall look. Your face and body is your message to the world and also is a direct reflection of your state wellness. Your appearance is composed of your skin, body, facial structure, hair, eyes and nails. Often life can toss you around and you’ll get the classic comment “You look tired”. Detoxify and combat that tired, dull look with BE Clean’s top-tier ingredient list. Your appearance is vital inside and out. Take the quality of your look to the next level. BE Clean.",
+        "price": 36.99,
+        "qty": 15
+    },{
+        "name": "BE PRO",
+        "title": "Vegan Protein : Vanilla Bean",
+        "img": "/images/beTrendImg/bePro.jpeg",
+        "description": "BE Pro is our premium-end Plant-based Protein Powder. With its elite Gluten-free/ Vegan/ Low carb formula, Be Pro stands out amongst the competition. With a full amino acid profile, all-natural ingredients, multiple digestive enzymes, and smooth taste you can feel confident that your body is fueled by the best. Depending on your fitness goals, Be Pro can be used as a meal replacement, post-workout recovery, pre-workout nourishment, or all three! There are 32 servings of a generous 21 grams of healthy protein per serving. Fuel yourself the cleanest way possible with Be Pro.",
+        "price": 39.99,
+        "qty": 18
+    }
+]

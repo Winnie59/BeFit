@@ -1,0 +1,41 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 8%;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/images/products.jpeg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img src="/images/brand.jpeg" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<% products.forEach((product,id) => { %>
+<div style="display:inline-flex; justify-content: center; position: relative; left: 8%; padding: 12px;">
+    <div class="card" style="width: 18rem;">
+        <img src="<%= product.img %> " class="card-img-top" alt=>
+        <div class="card-body" style="text-align: center;">
+            <h3 class="card-title"><%= product.name %> </h3>
+            <h6 class="card-title"><%= product.title %> </h6>
+            <p class="card-text">Price: <%= product.price %> </p>
+            <% if (product.qty <= 0) { %> 
+             <p class="card-text">Out of Stock</p>  
+              <a href="#" class="btn btn-dark">SOLD OUT</a>  
+            <% }  else { %> 
+            <p class="card-text">In Stock: <%= product.qty %> </p>
+             <a href="#" class="btn btn-info">BUY</a>
+            <% } %> 
+            </div>
+    </div>
+</div>
+  <% }) %> 

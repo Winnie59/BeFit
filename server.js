@@ -8,6 +8,7 @@ const beFitCreateController = require('./controllers/beFit')
 const starterController = require('./controllers/starter')
 const strongController = require('./controllers/strong')
 const superController = require('./controllers/super')
+const beTrendController = require('./controllers/beTrend')
 
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
@@ -22,6 +23,7 @@ app.use('/befit', beFitCreateController)
 app.use('/starter', starterController)
 app.use('/strong', strongController)
 app.use('/super', superController)
+app.use('/betrend', beTrendController)
 
 
 app.listen(PORT,() => {

@@ -3,14 +3,14 @@ const router = express.Router()
 const StarterPlan = require('../models/sPlan')
 const starterPlanSeeds = require('../db/starter.json')
 
-// router.get('/seed', async (req, res) => {
-//     try {
-//     const seedItems = await StarterPlan.create(starterPlanSeeds)
-//     res.send(seedItems)
-//   } catch (err) {
-//     res.send(err.message)
-//   }
-// })
+router.get('/seed', async (req, res) => {
+    try {
+    const seedItems = await StarterPlan.create(starterPlanSeeds)
+    res.send(seedItems)
+  } catch (err) {
+    res.send(err.message)
+  }
+})
 
 router.get('/', (req,res) => {
     StarterPlan.find({},(err,starters) => {

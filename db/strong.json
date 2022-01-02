@@ -1,0 +1,27 @@
+[
+    {
+        "workout": ["Unloaded Barbell Squat 1 set 20 reps","Barbell Squat 4 sets 15 reps","Dumbbell Walking Lunges 3 sets 20 reps","Leg Extension 4 sets 15 reps","Dumbbell Stiff Leg Deadlift 4 sets 15 reps","Dumbbell Calf Rasie 3 sets 15 reps"],
+        "focus": "Quads and Calves",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Dumbbell Single Arm Bent Over Row 3 sets 12 reps each side","Dumbbell Bicep Curl 4 sets 15 reps","Cable Seated Wide Grip Row 4 sets 10 reps","Cable Straight Arm Pull Down 3 sets 15 reps","Cable Inverted Bent Over Row 3 sets 15 Reps","Cable Rope Face Pull 3 sets 15 reps"],
+        "focus": "Pull Day",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    },{
+        "workout": ["Bridges 3 sets 20 reps","Fire Hydrants 2 sets 12 reps each side","Barbell Hip Thrust 4 sets 15 reps","Barbell Sumo Deadlift 3 sets 15 reps","Dumbbell Stiff Leg Deadlift 4 sets 15 reps","Dumbbell Sumo Squat 3 sets 15 reps"],
+        "focus": "Glutes And Hamstrings",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Dumbbell Lateral Raise 4 sets 15 reps","Dumbbell Front Raise 4 sets 15 reps","Barbell Decline Bench Press 3 sets 12 reps","Dumbbell Chest Flies 3 sets 12 reps","Cable Rope Tricep Push Down 3 sets 15 reps","Machine Shoulder Press 3 sets 15 reps"],
+        "focus": "Push Day",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Barbell Front Squat 3 sets 12 reps","Jumping Squat 3 sets 15 reps","Dumbbell Reverse Lunge 3 sets 15 reps each side","Barbell Bent Over Row 3 sets 15 reps","Dumbbell Front Raise 3 sets 15 reps","Dumbbell Plank Row 3 sets 15 reps"],
+        "focus": "Full Body",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    }
+]

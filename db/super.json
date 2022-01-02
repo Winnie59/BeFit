@@ -1,0 +1,27 @@
+[
+    {
+        "workout": ["Resistance Band Bridge 1 set 30 reps","Frog Pump 3 sets 20 reps","Goblet Squat 3 sets 15 reps","Barbell Hip Thrust 4 sets 15 reps","Barbell Sumo Deadlift 4 sets 15 reps","Dumbbell Reverse Lunge 3 sets 15 reps each side","Bench Dumbbell Split Squat 4 sets 15 reps each side"],
+        "focus": "Glutes And Hamstrings",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Dumbbell Lateral Raise 4 sets 15 reps","Dumbbell Front Raise Pull Apart 4 sets 15 reps","Barbell Bench Press 4 sets 10 reps","Barbell Upright Row 4 sets 15 reps","Dumbbell Seated Arnold Press 4 sets 12 reps","Dumbbell Seated Bent Over Fly 4 sets 12 reps","Cable Rope Tricep Push Down 3 sets 15 reps"],
+        "focus": "Push Day",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    },{
+        "workout": ["Unloaded Barbell Squat 5 sets 6 reps","Barbell Squat 5 sets 10 reps","Leg Press 5 sets 15 reps","Cable Front Squat 4 sets 15 reps","Leg Extension 4 sets 15 reps","Dumbbell Sumo Squat 3 sets 20 reps","Dumbbell Walking Lunges 3 sets 20 reps"],
+        "focus": "Quads and Calves",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Barbell Bent Over Row 5 sets 10 reps","Dumbbell Single Arm Bent Over Row 4 sets 15 reps each side","Neutral Grip Lat Pull Down 4 sets 15 reps","Lat Pull Down 4 sets 15 reps","Cable Single Arm Seated Row 4 sets 15 reps each side","Cable Seated Close Grip Row 4 sets 15 reps","Cable Rope Bicep Curl 4 sets 15 reps"],
+        "focus": "Pull Day",
+        "note": "60 sec. break each set"
+    },{
+        "workout": ["Barbell Sumo Squat 4 sets 15 reps","T-Bar Bent Over Row 4sets 15 reps","Dumbbell Squat Into Shoulder Press 4 sets 15 reps", "Barbell Deadlift Into Row 4 sets 15 reps","Dumbbell Bicep Curl 4 sets 15 reps","Push Up 4 sets 20 reps","V Ups 1 set 100 reps"],
+        "focus": "Full Body",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    }
+]

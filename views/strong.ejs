@@ -1,0 +1,37 @@
+<div class="card mb-3">
+    <img src="/images/strong.jpeg" class="card-img-top" >
+    <div class="card-body">
+      <h1 class="card-title">Strong</h1>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link "style="text-decoration: none; color: black" href="#">Warm Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="text-decoration: none; color: black"href="#">Cool Down</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <% strongs.forEach((strong,id) => { %>
+    <h2 class="card-title" style="padding-top: 30px;"><%= strong.focus %> </h2>
+    <p class="card-text"><%= strong.workout[0] %></p>
+    <p class="card-text"><%= strong.workout[1] %></p>
+    <p class="card-text"><%= strong.workout[2] %></p>
+    <p class="card-text"><%= strong.workout[3] %></p>
+    <p class="card-text"><%= strong.workout[4] %></p>
+    <p class="card-text"><%= strong.workout[5] %></p>
+    <form
+    action="/strong/<%= strong.id %>?_method=DELETE"
+    method="POST">
+    <input type="submit" class="btn btn-info" style="text-decoration: none; color: black" value="COMPLETE"/>
+  </form>
+    <% }) %> 
+  </div>
+</div>

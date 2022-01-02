@@ -1,0 +1,23 @@
+[
+    {
+        "workout": ["Unloaded Barbell Squat 1 set 15 reps","Barbell Squat 3 sets 15reps","Barbell Hip Thrust 3 sets 15reps","Dumbbell Stiff Leg Deadlift 3 sets 15 reps","Dumbbell Walking Lunges 3 sets 15 reps"],
+        "focus": "Lower Body",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    },{
+        "workout": ["Dumbbell Shoulder Press 3 sets 15 reps","Dumbbell Bent Over Row 3 sets 15 reps","Dumbbell Bicep Curl 3 sets 15 reps","Dumbbell Overhead Tricep Extension 3 sets 15 reps", "Dumbbell Chest Press 3 sets 15 reps"],
+        "focus": "Upper Body",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    },{
+        "workout": ["Dumbbell Shoulder Press 3 sets 12 reps", "Goblet Squat 3 sets 15 reps","Dumbbell Squat Into Shoulder Press 3 sets 15 reps","Dumbbell Bicep Curls Into Rows 3 sets 15 reps","Kneeling Push Up 3 sets 15 reps"],
+        "focus": "Full Body",
+        "note": "60 sec. break each set"
+    },{
+        "focus": "Rest Day"
+    },{
+        "focus": "Rest Day"
+    }
+]

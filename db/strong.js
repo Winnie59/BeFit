@@ -2,9 +2,9 @@ const mongoose = require('./connection')
 const StrongPlan = require('../models/strongP')
 const strongPlanSeeds = require('./strong.json')
 
-WorkoutPlan.deleteMany({})
+StrongPlan.deleteMany({})
 .then(()=>{
-    return WorkoutPlan.insertMany(strongPlanSeeds)
+    return StrongPlan.insertMany(strongPlanSeeds)
 })
 .then(data => console.log(data))
 .catch(err=>console.log(err))

@@ -18,4 +18,10 @@ router.get('/', (req,res) => {
     })
 })
 
+router.get('/:id',(req,res) => {
+  BeTrendSeeds.findById(req.params.id,(err,product) => {
+      res.render('beTrend/trendShow',{product})
+  })
+})
+
 module.exports = router

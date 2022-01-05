@@ -1,9 +1,33 @@
-<div class="card mb-3">
-    <img src="<%= product.img %> " class="card-img-top">
+<div class="card mb-3" style="text-align: center;">
+    <img src="<%= product.img %> " class="rounded mx-auto d-block" style="width: 70%; height: auto; ">
     <div class="card-body">
-      <h5 class="card-title"><%= product.name %> </h5>
-      <h5 class="card-title"><%= product.title %> </h5>
-      <p class="card-text"><%= product.description %> </p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <button class="btn btn-info btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" style="margin-bottom: 5%;"><%= product.name %></button>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title" id="offcanvasBottomLabel"><%= product.name %>  
+      <% if (product.qty <= 0) { %>  
+         <a href="#" class="btn btn-dark">SOLD OUT</a>  
+      <% } else { %> 
+      <form action="/betrend/<%= product.id %>/BUY?_method=PUT" method="POST">
+      <input type="submit" class="btn btn-info" style="text-decoration: none; color:black;" value="BUY"> 
+      </form>
+      <% } %> 
+    </h3>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    <h5 class="card-title"><%= product.title %> <br>$<%= product.price %></br> </h5>
+    <p class="card-text"><%= product.description %> </p>
+  </div>
+</div>
     </div>
   </div>
+  <div class="btn-group " role="group" aria-label="Basic outlined example" style="margin-left: 4%;">
+    <form action="/betrend/<%= product.id %>?_method=DELETE" method="POST">
+      <input type="submit" class="btn btn-outline-secondary" style="text-decoration: none; color:black;" value="Delete"> 
+      </form> 
+    <button type="button" class="btn btn-outline-secondary" ><a href="/betrend/<%= product.id %>/edit" style="text-decoration: none; color: black;">EDIT</a></button>
+    <button type="button" class="btn btn-outline-secondary"><a href="/betrend"style="text-decoration: none; color: black"> BACK</a></button>
+  </div>
+

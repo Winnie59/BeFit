@@ -5,7 +5,7 @@ const productSeeds = require('./beTrend.json')
 
 BeTrendSeeds.deleteMany({})
 .then(()=>{
-    return productSeeds.insertMany(productSeeds)
+    return BeTrendSeeds.insertMany(productSeeds)
 })
 .then(data => console.log(data))
 .catch(err=>console.log(err))

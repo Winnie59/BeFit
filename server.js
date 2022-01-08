@@ -1,14 +1,17 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const { PORT } = process.env
+const { PORT, SESSION_SECRET } = process.env
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
+// const session = require('express-session')
 const beFitCreateController = require('./controllers/beFit')
 const starterController = require('./controllers/starter')
 const strongController = require('./controllers/strong')
 const superController = require('./controllers/super')
 const beTrendController = require('./controllers/beTrend')
+const memberController = require('./controllers/member')
+const session = require('express-session')
 
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
@@ -19,12 +22,48 @@ app.use(express.urlencoded({extended:false}))
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
 
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+}))
+
+app.use((req,res,next) => {
+    res.locals.email = req.session.email
+    res.locals.username = req.session.username
+    res.locals.loggedIn = req.session.loggedIn
+    next()
+})
+
+app.use((req,res,next) => {
+    res.locals.message = req.session.message
+    req.session.message = ""
+    next()
+})
+
 app.use('/befit', beFitCreateController)
 app.use('/starter', starterController)
 app.use('/strong', strongController)
 app.use('/super', superController)
 app.use('/betrend', beTrendController)
+app.use('/member', memberController)
 
+app.get('/setCookie/:data', (req,res) => {
+    req.session.data =req.params.data
+    res.send("session data set")
+})
+
+app.get ('/getSessionInfo', (req,res) => {
+    res.send(req.session.data)
+})
+
+app.get('/home', (req,res) => {
+    res.render('home')
+})
+
+app.get('/about', (req,res) => {
+    res.render('about')
+})
 
 app.listen(PORT,() => {
     console.log(`✅ PORT: ${PORT} 🌟`)

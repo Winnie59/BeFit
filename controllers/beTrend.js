@@ -3,13 +3,21 @@ const router = express.Router()
 const BeTrendSeeds = require('../models/beTrend')
 const productSeeds = require('../db/beTrend.json')
 
+const authRequired1 = (req,res,next) => {
+  if (req.session.loggedIn && req.session.email === '111@gmail.com') {
+      next()
+  } else {
+      res.redirect('/member/login')
+  }
+}
+
 router.get('/', (req,res) => {
     BeTrendSeeds.find({},(err,products) => {
      res.render('beTrend/trendIndex',{products})   
     })
 })
 
-router.get('/new',(req,res) => {
+router.get('/new',authRequired1 ,(req,res) => {
   res.render('beTrend/trendNew')
 })
 
@@ -25,13 +33,13 @@ router.post('/',(req,res) => {
   })
 })
 
-router.delete('/:id',(req,res) => {
+router.delete('/:id',authRequired1,(req,res) => {
   BeTrendSeeds.findByIdAndRemove(req.params.id, (err,deleteProduct) => {
     res.redirect('/betrend')
   })
 })
 
-router.get('/:id/edit', (req,res) => {
+router.get('/:id/edit',authRequired1, (req,res) => {
   BeTrendSeeds.findById(req.params.id,(err,product) => {
     res.render('beTrend/trendEdit',{product})
   })

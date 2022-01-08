@@ -5,34 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>BE FIT</title>
+    <link rel="icon" type="image/x-icon" href="/images/befit.jpeg">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="/images/befit.jpeg" width="50" height="50"></a>
+    <a class="navbar-brand" href="/home"><img src="/images/befit.jpeg" width="50" height="50"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Member
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Sign Up</a></li>
-              <li><a class="dropdown-item" href="#">Log In</a></li>
+              <% if (!loggedIn) {%> 
+              <li><a class="dropdown-item" href="/member/signup">Sign Up</a></li>
+              <li><a class="dropdown-item" href="/member/login">Log In</a></li>
+              <% } else { %> 
+             <li><a class="dropdown-item" href="/member/logout">Log Out</a></li>
+             <% } %> 
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="/member/profile">Profile</a></li>
             </ul>
           </li>
         <li class="nav-item dropdown">
@@ -53,6 +56,14 @@
             <a class="nav-link" href="/betrend">BE TREND</a>
         </li>
       </ul>
+      <div style="padding: 25px;">
+      <% if (username) { %> 
+        <h5>Welcome, <%= username %> </h5>
+        <% } %> 
+        <% if (message) {%> 
+        <h5><%= message %> </h5>
+        <% } %>
+      </div>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-info" type="submit">Search</button>
@@ -61,10 +72,11 @@
     </div>
   </div>
 </nav>
+
 <%-body%> 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-md">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/home">
             <img src="/images/befit.jpeg"width="30" height="30" class="d-inline-block align-text-top">
             BE FIT
         </a>
@@ -74,5 +86,7 @@
         </div>
     </div>
 </nav>  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

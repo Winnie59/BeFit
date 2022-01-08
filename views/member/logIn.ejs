@@ -1,0 +1,28 @@
+<form class="px-4 py-3" action="/member/login" method="POST" style="margin: 10% 20% 10% 20%; border: 1px solid lightgrey; box-shadow: 2px 2px 4px lightgray;">
+  <h1 style="margin-bottom: 5%;">Log In</h1>  
+  <div class="row mb-3" >
+    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+  </div>
+  <div class="row mb-3">
+      <label for="username" class="col-sm-2 col-form-label">Username:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="password" class="col-sm-2 col-form-label">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+    </div>
+      <input style="margin-top: 3%;" type="submit" class="btn btn-info" value="Log In"> 
+   <div class="dropdown-divider" style="margin-top: 3%;"></div>
+  <a class="dropdown-item" href="/member/signup">New around here? Sign up</a>
+  <a class="dropdown-item" href="#">Forgot password?</a>
+
+
+  </form>
+

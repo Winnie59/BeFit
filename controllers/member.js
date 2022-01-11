@@ -3,10 +3,6 @@ const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const router = express.Router()
 
-router.get('/profile', (req,res) => {
-    res.render('member/profile')
-})
-
 router.get('/signup', (req,res) => {
     res.render('member/signUp')
 })
@@ -28,7 +24,7 @@ router.post('/signup', async (req,res,next) => {
                 req.session.email = createdUser.email
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
-                res.redirect('/home')
+                res.redirect('/profile')
             }
         } else {
             req.session.message = 'Password must match'
@@ -48,12 +44,12 @@ router.post('/login',async (req,res,next) => {
         const emailToLogin = await User.findOne({email: req.body.email})
         const userToLogin = await User.findOne({username: req.body.username})
         if (userToLogin && emailToLogin) {
-            const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+            const validPassword = bcrypt.compareSync(req.body.password,  userToLogin.password)
             if (validPassword) {
                 req.session.email = userToLogin.email
                 req.session.username = userToLogin.username
                 req.session.loggedIn = true
-                res.redirect('/member/profile')
+                res.redirect('/profile')
             } else {
                 req.session.message = 'Invaild Email, Username or Password'
                 res.redirect('/member/login')

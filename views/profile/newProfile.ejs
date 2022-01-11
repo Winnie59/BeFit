@@ -1,0 +1,32 @@
+<h1 style="margin-top: 4%; padding-bottom: 0px; padding-top: 30px; text-align: center;">Create New Profile</h1>
+<form class="row g-3" style="padding: 100px;" action="/profile" method="POST">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" id="name">
+    </div>
+    <div class="col-md-6">
+      <label for="title" class="form-label">status</label>
+      <input type="text" class="form-control" name="status" id="status">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="profileImg" id="profileImg" placeholder="Image File">
+        <label class="input-group-text" for="img">Upload</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="weight" class="form-label">Weight</label>
+      <input type="number" class="form-control" step="0.01"  name="weight" id="weight">
+    </div>
+    <div class="col-md-4">
+        <label for="height" class="form-label">Height</label>
+        <input type="number" step="0.01"  class="form-control" name="height" id="height">
+      </div>
+    <div class="col-md-4">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" name="age" id="age">
+      </div>
+    <div class="col-12">
+      <input type="submit" class="btn btn-info" style="text-decoration: none; color: black;" value="Create">
+      <button type="submit" class="btn btn-secondary"><a href="/betrend" style="text-decoration: none; color: white;"> Back</a></button>
+    </div>
+  </form>

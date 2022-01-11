@@ -4,6 +4,7 @@ const app = express()
 const { PORT, SESSION_SECRET } = process.env
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
+
 // const session = require('express-session')
 const beFitCreateController = require('./controllers/beFit')
 const starterController = require('./controllers/starter')
@@ -11,6 +12,8 @@ const strongController = require('./controllers/strong')
 const superController = require('./controllers/super')
 const beTrendController = require('./controllers/beTrend')
 const memberController = require('./controllers/member')
+const profileController = require('./controllers/profile')
+
 const session = require('express-session')
 
 app.use(express.static('public'))
@@ -32,6 +35,7 @@ app.use((req,res,next) => {
     res.locals.email = req.session.email
     res.locals.username = req.session.username
     res.locals.loggedIn = req.session.loggedIn
+    res.locals.userId = req.session.userId
     next()
 })
 
@@ -40,7 +44,7 @@ app.use((req,res,next) => {
     req.session.message = ""
     next()
 })
-
+app.use('/', profileController)
 app.use('/befit', beFitCreateController)
 app.use('/starter', starterController)
 app.use('/strong', strongController)
@@ -55,14 +59,6 @@ app.get('/setCookie/:data', (req,res) => {
 
 app.get ('/getSessionInfo', (req,res) => {
     res.send(req.session.data)
-})
-
-app.get('/home', (req,res) => {
-    res.render('home')
-})
-
-app.get('/about', (req,res) => {
-    res.render('about')
 })
 
 app.listen(PORT,() => {

@@ -11,7 +11,7 @@
     <div style="text-align: center; margin: 5%">
       <a
         style="width: 100px; height: 55px"
-        href="/befit/create/new"
+        href="/befit/<%= profile.id %>/new"
         class="btn btn-outline-info"
         ><img style="width: 35px" src="/images/plus.png"
       /></a>
@@ -71,12 +71,12 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary">
               <a
-                href="/befit/create/<%= workout.id %>/edit"
+                href="/befit/create/<%= profile.id %>/<%= workout.id %>/edit"
                 style="text-decoration: none; color: white"
                 >EDIT</a>
             </button>
             <form
-              action="/befit/create/<%= workout.id %>?_method=DELETE"
+              action="/befit/create/<%=profile.id%>/<%= workout.id %>?_method=DELETE"
               method="POST"
             >
               <input

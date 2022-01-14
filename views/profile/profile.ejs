@@ -10,13 +10,13 @@
 <div class="card" style="width: 18rem;">
     <img src="<%= profile.profileImg %> " class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title"><%= profile.name %></h5>
+      <h5 class="card-title"><a href="/profile/<%= profile.id %> "><%= profile.name %></a></h5>
       <p class="card-text"><%= profile.status  %></p>
       <p class="card-text">Weight:<%= profile.weight %>lbs</p>
       <p class="card-text">Height:<%= profile.height %>feet</p>
       <p class="card-text">Age:<%= profile.age %></p>
       <p class="card-text">Recent workout:<%= profile.recentWorkout %></p>
-      <a href="/profile/<%= profile.id %>/edit " class="btn btn-primary">edit</a>
+      <a href="/profile/<%= profile.id %> " class="btn btn-primary">edit</a>
       <form action="/profile/<%= profile.id %>?_method=DELETE" method="POST">
         <input type="submit"class="btn btn-info" style="text-decoration: none; color: black;" value="DELETE">
         </form>

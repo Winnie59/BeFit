@@ -7,10 +7,14 @@ const userProfile = new mongoose.Schema({
     height: Number,
     age: Number,
     profileImg: String,
-    recentWorkout: {
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    recentWorkout: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Workout'
-    }
+    }]
 })
 
 const Profile = mongoose.model('Profile', userProfile)

@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const { PORT, SESSION_SECRET } = process.env
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
@@ -16,6 +17,7 @@ const profileController = require('./controllers/profile')
 
 const session = require('express-session')
 
+app.use(cors())
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
@@ -60,6 +62,7 @@ app.get('/setCookie/:data', (req,res) => {
 app.get ('/getSessionInfo', (req,res) => {
     res.send(req.session.data)
 })
+
 
 app.listen(PORT,() => {
     console.log(`✅ PORT: ${PORT} 🌟`)

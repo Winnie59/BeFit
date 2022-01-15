@@ -32,19 +32,19 @@ router.post('/:id', (req,res) => {
 
 router.delete('/create/:id/:workoutId',authRequired,async (req,res) => {
     const profile =  await  Profile.findById(req.params.id)
-    const workout = await Workout.findOneAndRemove({profile: req.params.id})
+    const workout = await Workout.findByIdAndDelete(req.params.workoutId)
         res.redirect(`/befit/${profile._id}/create`)
 })
 
 router.put('/create/:id/:workoutId', async(req,res) => {
-    req.body.profile = req.params.id
-    const workout = await Workout.findOneAndUpdate({profile: req.params.id}, req.body, {new: true})
-        res.redirect(`/befit/${req.params.id}/create`)
+    const profile =  await  Profile.findById(req.params.id)
+    const workout = await Workout.findByIdAndUpdate(req.params.workoutId, req.body, {new: true})
+        res.redirect(`/befit/${profile._id}/create`)
 })
 
 router.get('/create/:id/:workoutId/edit',authRequired, async(req,res) => {
     const profile =  await  Profile.findById(req.params.id)
-    const workout = await Workout.find({profile: req.params.id})
+    const workout = await Workout.findById(req.params.workoutId)
         res.render('beFit/edit',{workout,profile})
 })
 

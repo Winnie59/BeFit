@@ -1,31 +1,41 @@
-<form class="px-4 py-3" action="/member/signup" method="POST" style="margin: 10% 15% 10% 15%;border: 1px solid lightgrey; box-shadow: 2px 2px 4px lightgray;">
-  <h1 style="margin-bottom: 5%;">Sign Up</h1>  
-  <div class="row mb-3" >
-    <label for="email" class="col-sm-2 col-form-label">Email:</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="email" name="email" required>
+<div class="card mb-12">
+  <div class="row g-0">
+    <div class="col-md-4" style="padding-top: 20%;">
+      <img src="/images/1.jpeg" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <form class="px-4 py-3" action="/member/signup" method="POST" style="margin: 10% 12% 10% 12%;border: 1px solid lightgrey; box-shadow: 2px 2px 4px lightgray;">
+          <h1 style="margin-bottom: 5%;">Sign Up</h1>  
+          <div class="row mb-3" >
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="row mb-3" >
+              <label for="username" class="col-sm-2 col-form-label">Username:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="password" class="col-sm-2 col-form-label">Password:</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+                <label for="verifyPassword" class="col-sm-2 col-form-label">Re-type Password:</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="verifyPassword" name="verifyPassword" required>
+                </div>
+              </div>
+            <input type="submit" class="btn btn-info" value="Sign Up">
+            <div class="dropdown-divider" style="margin-top: 3%;"></div>
+          <a class="dropdown-item" href="/member/login">Are you a BE FIT member? Log In</a>
+          </form>
+      </div>
     </div>
   </div>
-  <div class="row mb-3" >
-      <label for="username" class="col-sm-2 col-form-label">Username:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="username" name="username" required>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <label for="password" class="col-sm-2 col-form-label">Password:</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="password" name="password" required>
-      </div>
-    </div>
-    <div class="row mb-3">
-        <label for="verifyPassword" class="col-sm-2 col-form-label">Re-type Password:</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="verifyPassword" name="verifyPassword" required>
-        </div>
-      </div>
-    <input type="submit" class="btn btn-info" value="Sign Up">
-    <div class="dropdown-divider" style="margin-top: 3%;"></div>
-  <a class="dropdown-item" href="/member/login">Are you a BE FIT member? Log In</a>
-  </form>
-
+</div>

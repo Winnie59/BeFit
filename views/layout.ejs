@@ -57,7 +57,9 @@
         </li>
       </ul>
       <div style="padding: 25px;">
-      <% if (username) { %> 
+      <% if (username && email === '111@gmail.com') { %> 
+        <h5>Welcome, Admin: <%= username %> </h5>
+        <% } else if (username) {%> 
         <h5>Welcome, <%= username %> </h5>
         <% } %> 
         <% if (message) {%> 

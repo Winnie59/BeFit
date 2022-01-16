@@ -1,25 +1,41 @@
-<div style="text-align: center; margin: 5%">
-  <a
-    style="width: 100px; height: 55px"
-    href="/profile/new"
-    class="btn btn-outline-info"
-    ><img style="width: 35px" src="/images/plus.png"
-  /></a>
-</div>
+<div class="card mb-12">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body" style="margin-top: 22%;">
+        <h2 class="card-title display-3" style="color: rgb(60, 62, 65); text-align: center;">"Create Your Profile"</h2>
+        <div style="text-align: center; margin-top: 5%;">
+        <button type="button" class="btn btn-outline-info btn-lg"><a href="/profile/new" style="text-decoration: none; color:grey; font-weight: bolder;"> CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="/images/profilehome.jpeg" class="img-fluid">
+    </div>
+  </div>
+  <nav class="navbar navbar-light bg-light"  >
+    <div class="container-fluid" >
+      <h1 class="navbar-text display-6" >
+        Create Your <span style="color: #019ecb; font-weight: bolder;">BE FIT</span> Daily Planner
+      </h1>
+    </div>
+  </nav>
 <% profiles.forEach((profile,id) => { %>
-<div class="card" style="width: 18rem;">
+<div class="card mb-3" style="margin: 5% 20%; box-shadow: 2px 2px 4px lightgray;" >
     <img src="<%= profile.profileImg %> " class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title"><a href="/profile/<%= profile.id %> "><%= profile.name %></a></h5>
-      <p class="card-text"><%= profile.status  %></p>
-      <p class="card-text">Weight:<%= profile.weight %>lbs</p>
-      <p class="card-text">Height:<%= profile.height %>feet</p>
-      <p class="card-text">Age:<%= profile.age %></p>
-      <p class="card-text">Recent workout:<%= profile.recentWorkout %></p>
-      <a href="/profile/<%= profile.id %>/edit" class="btn btn-primary">edit</a>
-      <form action="/profile/<%= profile.id %>?_method=DELETE" method="POST">
-        <input type="submit"class="btn btn-info" style="text-decoration: none; color: black;" value="DELETE">
-        </form>
+    <div class="card-body" style="text-align: center">
+      <h1 class="card-title display-3" ><a style="text-decoration: none; color: #019ecb; font-weight: bolder;" href="/profile/<%= profile.id %> "><%= profile.name %></a></h1>
+      <h3 class="card-text">"<%= profile.status  %>"</h3>
+      <button type="button" class="btn btn-outline-info btn-lg " style="margin: 2%;"><a href="/befit/<%= profile.id %>/create" style="text-decoration: none; color:grey; font-weight: bolder;"> Create daily plans</a></button>
+      <p class="card-text"><img src="/images/weight.png" style="width: 40px; height: 40px;"><span style="padding:10px;"><%= profile.weight %> lbs.</span></p>
+      <p class="card-text"> <img src="/images/height.png" style="width: 35px; height: 35px;" ><span style="padding:10px;"><%= profile.height %> feet</span> </p>
+      <p class="card-text"><img src="/images/age.png" style="width: 40px; height: 40px;"><span style="padding:10px;"> <%= profile.age %> y.o.</span></p>
+      <div class="btn-group " role="group" aria-label="Basic outlined example" style="margin-left: 4%;">
+        <form action="/profile/<%= profile.id %>?_method=DELETE" method="POST">
+          <input type="submit" class="btn btn-outline-secondary" style="text-decoration: none; color:black;" value="DELETE"> 
+          </form> 
+        <button type="button" class="btn btn-outline-secondary" ><a href="/profile/<%= profile.id %>/edit" style="text-decoration: none; color: black;">EDIT</a></button>
+      </div>
     </div>
   </div>
   <% }) %> 
+

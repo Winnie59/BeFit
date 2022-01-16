@@ -25,7 +25,6 @@ router.post('/signup', async (req,res,next) => {
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
                 req.session.userId = createdUser._id
-                console.log(req.body)
                 res.redirect('/profile')
             }
         } else {
@@ -52,7 +51,6 @@ router.post('/login',async (req,res,next) => {
                 req.session.username = userToLogin.username
                 req.session.loggedIn = true
                 req.session.userId = userToLogin._id
-                console.log(req.body)
                 res.redirect('/profile')
             } else {
                 req.session.message = 'Invaild Email, Username or Password'

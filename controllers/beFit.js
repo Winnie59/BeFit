@@ -12,6 +12,10 @@ const authRequired = (req,res,next) => {
     }
 }
 
+router.get('/create' ,(req,res) => {
+    res.render('befitCreate')
+})
+
 router.get('/:id/create',authRequired,async (req,res) => {
   const profile =  await  Profile.findById(req.params.id)
   const workouts = await Workout.find({profile: req.params.id})

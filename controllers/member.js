@@ -11,9 +11,11 @@ router.post('/signup', async (req,res,next) => {
     try {
         if(req.body.password === req.body.verifyPassword) {
             const desireUsername = req.body.username 
+            const desireEmail = req.body.email
             const userExists = await User.findOne({username: desireUsername})
-            if (userExists) {
-                req.session.message = 'Username had already taken'
+            const emailExists = await User.findOne({email: desireEmail})
+            if (userExists || emailExists) {
+                req.session.message = 'Username or Email had already taken'
                 res.redirect('/member/signup')
             } else {
                 const salt = bcrypt.genSaltSync(10)

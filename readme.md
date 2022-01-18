@@ -1,6 +1,8 @@
 # BE FIT
   <a href="https://github.com/Winnie59/BeFit">
-    <img src="public/images/befit.jpeg" alt="Logo" width="80" height="80">
+    <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;" src="public/images/befit.jpeg" alt="Logo" width="80" height="80" >
   </a>
 
 # Description 

@@ -92,10 +92,10 @@ Winnie Bolm
 * winnie.bolm@gmail.com
 
 # Improvement
-- Complete on forgot password part.
-- Using API, user can choose their workout list from API instead of writing them out.
-- Add more data on weekly workout plans and make them randomly update each week. Also make it for user can be able to edit them.
+- Complete on forgot password part on log in page.
+- Using API, user can choose their workout list from API instead of writing.
+- Add more datas on weekly workout plans and make them randomly update each week. Also make them editable.
 - Add the notifications for user can get update on thier workout plans
-- Use Multer to help upload image file.
-- Complete on cart, order and purchash route on BE TREND selling page.
-- Complete on seach bar function.
+- Use Multer to help uploading image files.
+- Complete on cart, order and purchase routes on BE TREND selling page.
+- Complete on search bar function.

@@ -10,35 +10,43 @@ BE FIT is a helpful workout application where those who enjoy working out and tr
 
 * Start with the home page. From this page user can get started by choosing base on their interest.
 
-![home](public/images/readme/read1.jpeg)
+![home](public/images/readme/read1.png)
 
 * BE FIT page. This page has options to create your daily plan or choose any weekly plans that BE FIT provided.
 
-![befit](public/images/readme/read2.jpeg)
+![befit](public/images/readme/read2.png)
 
 * Weekly Plans. There are 3 plans starter, strong and super. These plans will have a weekly sample workouts for user to complete them daily.
 
-![weekly](public/images/readme/read3.jpeg)
+![weekly](public/images/readme/read3.png)
 
 * Create your own daily plans. User has to become member first to use this page. 
 
-![daily](public/images/readme/read4.jpeg)
+![daily](public/images/readme/read4a.png)
+
+![daily](public/images/readme/read4b.png)
 
 * After sign up, log in and create profile, then user will be able to create their own daily plans.
 
-![daily](public/images/readme/read5.jpeg)
+![daily](public/images/readme/read5.png)
 
 * The plan has to complete before in order to see details and complete on the next one.
 
-![daily](public/images/readme/read6.jpeg)
+![daily](public/images/readme/read6a.jpeg)
+
+![daily](public/images/readme/read6b.png)
+
+![daily](public/images/readme/read6c.jpeg)
 
 * BE TREND is the page that user can find and purchase the health and wellness products in this case we are using products from BECOME nutrition. 
 
-![betrend](public/images/readme/read7.jpeg)
+![betrend](public/images/readme/read7.png)
 
 * Only Admin is allowed to create, edit and delete the products from this page.
 
-![betrend](public/images/readme/read8.jpeg)
+![betrend](public/images/readme/read8a.png)
+
+![betrend](public/images/readme/read8b.jpeg)
 
 # Built With
 * [Node.js](https://nodejs.org/)
@@ -76,6 +84,12 @@ BE FIT is a helpful workout application where those who enjoy working out and tr
 ![wireFrames](public/images/readme/wire3.jpeg)
 
 ![wireFrames](public/images/readme/wire4.jpeg)
+
+# Contact
+
+Winnie Bolm 
+* [Winnie Bolm LinkedIn](https://www.linkedin.com/in/winniebolm/) 
+* winnie.bolm@gmail.com
 
 # Improvement
 - Complete on forgot password part.

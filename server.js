@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5009
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
 
-// const session = require('express-session')
+app.use(cors())
 const beFitCreateController = require('./controllers/beFit')
 const starterController = require('./controllers/starter')
 const strongController = require('./controllers/strong')
@@ -19,7 +19,7 @@ const profileController = require('./controllers/profile')
 const session = require('express-session')
 
 
-app.use(cors())
+
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 

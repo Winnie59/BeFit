@@ -39,7 +39,7 @@ router.post('/signup', async (req,res,next) => {
 })
 
 router.get('/login', (req,res) => {
-    res.render('member/login')
+    res.render('member/logIn')
 })
 
 router.post('/login',async (req,res,next) => {

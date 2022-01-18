@@ -2,7 +2,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const { PORT, SESSION_SECRET } = process.env
+const SESSION_SECRET = process.env.SESSION_SECRET
+const PORT = process.env.PORT || 5009
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
 
@@ -16,6 +17,7 @@ const memberController = require('./controllers/member')
 const profileController = require('./controllers/profile')
 
 const session = require('express-session')
+
 
 app.use(cors())
 app.use(express.static('public'))

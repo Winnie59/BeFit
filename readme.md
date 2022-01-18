@@ -1,9 +1,11 @@
 # BE FIT
-  <a href="https://github.com/Winnie59/BeFit">
+  <a href="https://befitapp.herokuapp.com">
     <img style="display: block;
   margin-left: auto;
   margin-right: auto;" src="public/images/befit.jpeg" alt="Logo" width="80" height="80" >
   </a>
+
+* [BE FIT](https://befitapp.herokuapp.com)
 
 # Description 
 BE FIT is a helpful workout application where those who enjoy working out and training can create, edit and delete a daily schedule  or choose from our weekly workout plans. They can also shop for health and wellness products.

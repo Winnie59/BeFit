@@ -64,7 +64,7 @@ BE FIT is a helpful workout application where those who enjoy working out and tr
 # Installation instructions
 1. Clone the repo
    ```sh
-   git clone https://github.com/Winnie59/BeFit
+   git clone https://github.com/your_username_/BeFit
    ```
 2. Install all NPM packages
    ```sh
